@@ -1,0 +1,134 @@
+.services {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 50px;
+    padding: 60px 50px;
+}
+
+.left {
+    flex: 1;
+}
+
+.right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.services_title {
+    font-family: 'Inter', sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    color: #212121;
+    margin-bottom: 40px;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.cat {
+    width: 60px;
+    height: auto;
+    flex-shrink: 0;
+    animation: float 3s ease-in-out infinite;
+}
+
+.text h3 {
+    font-family: 'Inter', sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: #212121;
+    margin: 0 0 5px 0;
+}
+
+.text p {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    color: #555;
+    margin: 0;
+}
+
+.code_block {
+    background: #1E1E1E;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 400px;
+    height: 400px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    font-family: 'Courier New', monospace;
+}
+
+.code_header {
+    background: #2D2D2D;
+    padding: 10px 15px;
+    display: flex;
+    gap: 8px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #B9FF66;
+}
+
+.code {
+    padding: 20px;
+    margin: 0;
+    color: #B9FF66;
+    font-size: 14px;
+    line-height: 1.6;
+    font-family: 'Courier New', monospace;
+    white-space: pre-wrap;
+}
+
+.cursor {
+    color: #B9FF66;
+    animation: blink 0.8s step-end infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+}
+
+@media (max-width: 768px) {
+    .services {
+        flex-direction: column;
+        padding: 40px 20px;
+        gap: 40px;
+    }
+
+    .right {
+        width: 100%;
+    }
+
+    .code_block {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .code {
+        font-size: 11px;
+        padding: 15px;
+        line-height: 1.5;
+        white-space: pre-wrap;
+        word-break: break-word;
+    }
+}

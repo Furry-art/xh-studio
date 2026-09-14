@@ -1,0 +1,161 @@
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    padding: 50px;
+    min-height: 240px;
+    overflow: hidden;
+    position: relative;
+}
+
+.slide {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    width: 100%;
+}
+
+.slide_left {
+    animation: slideInLeft 0.5s ease forwards;
+}
+
+.slide_right {
+    animation: slideInRight 0.5s ease forwards;
+}
+
+@keyframes slideInLeft {
+    from { opacity: 0; transform: translateX(60px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideInRight {
+    from { opacity: 0; transform: translateX(-60px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+.info_block {
+    background-color: #B9FF66;
+    border-radius: 50px;
+    width: 100%;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    box-shadow: none;
+}
+
+.title {
+    font-family: 'Inter', sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    color: #212121;
+    margin: 0;
+}
+
+.subtitle {
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    color: #212121;
+    margin: 0;
+}
+
+.button {
+    background: #212121;
+    color: #B9FF66;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 10px;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    width: fit-content;
+    transition: filter 0.2s ease, transform 0.2s ease;
+}
+
+.button:hover {
+    filter: brightness(1.2);
+    transform: translateY(-2px);
+}
+
+.image {
+    width: 100px;
+    height: 100px;
+    flex-shrink: 0;
+}
+
+.cat1 {
+    width: 100%;
+    height: auto;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.dots {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        padding: 30px 20px;
+        gap: 20px;
+    }
+
+    .slide {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .info_block {
+        width: 95%;
+        padding: 25px;
+        text-align: center;
+    }
+
+    .title {
+        font-size: 28px;
+        margin-bottom: 10px;
+    }
+
+    .subtitle {
+        font-size: 15px;
+        margin-bottom: 20px;
+    }
+
+    .button {
+        width: 100%;
+        padding: 16px 24px;
+        font-size: 17px;
+    }
+
+    .image {
+        display: none;
+    }
+
+    .dots {
+        display: flex;
+        gap: 12px;
+        margin-top: 20px;
+    }
+}
+
+.dot,
+.dot_active {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #ccc;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.dot_active {
+    background: #B9FF66;
+    transform: scale(1.2);
+}

@@ -1,0 +1,41 @@
+.projects {
+    padding: 60px 50px;
+}
+
+.title {
+    font-family: 'Inter', sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    color: #212121;
+    margin-bottom: 40px;
+}
+
+.card {
+    background: #191A23;
+    border-radius: 30px;
+    padding: 40px;
+    max-width: 100%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.text {
+    font-family: 'Inter', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #B9FF66;
+    margin: 0 0 10px 0;
+}
+
+.subtext {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    color: #B9FF66;
+    margin: 0;
+}
+
+
+@media (max-width: 768px) {
+    .projects {
+    padding: 0 0;
+}
+}

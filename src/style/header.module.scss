@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+.body {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 100%;
+    height: 100px;
+    padding: 0 50px;
+    position: relative;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+}
+
+.logo_xh {
+    font-family: 'Inter', sans-serif;
+    font-size: 30px;
+    font-weight: 800;
+    color: black;
+    margin-right: 8px;
+}
+
+.logo_studio {
+    position: relative;
+    font-family: 'Inter', sans-serif;
+    font-size: 30px;
+    font-weight: 800;
+    color: black;
+}
+
+.ellipse {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    background-color: #B9FF66;
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.text {
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+    transition: transform 0.2s ease;
+
+    &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -2px;
+        width: 0;
+        height: 2px;
+        background: #191A23;
+        transition: width 0.3s ease;
+    }
+
+    &:hover::after {
+        width: 100%;
+    }
+}
+
+.text1 { @extend .text; animation: fadeIn 1.2s ease forwards; }
+.text2 { @extend .text; animation: fadeIn 1.4s ease forwards; }
+.text3 { @extend .text; animation: fadeIn 1.6s ease forwards; }
+.text4 { @extend .text; animation: fadeIn 1.8s ease forwards; }
+
+.right_side {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.burger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    z-index: 10;
+}
+
+.burger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: #212121;
+    border-radius: 2px;
+    transition: 0.3s;
+}
+
+.button_click {
+    display: flex;
+    align-items: center;
+}
+
+.background {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 135px;
+    height: 40px;
+    border-radius: 10px;
+    background-color: #B9FF66;
+    cursor: pointer;
+    transition: filter 0.2s ease, transform 0.2s ease;
+    animation: fadeIn 1.4s ease forwards;
+}
+
+.background:hover {
+    filter: brightness(0.9);
+    transform: translateY(-2px);
+}
+
+.button_text {
+    margin: 0;
+    font-weight: 600;
+    font-family: 'Inter', sans-serif;
+    cursor: pointer;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+
+.mobile_menu p:hover {
+    filter: brightness(0.9);
+}
+
+
+@media (max-width: 768px) {
+    .body {
+        padding: 0 20px;
+    }
+
+    .logo_xh,
+    .logo_studio {
+        font-size: 22px;
+    }
+
+    .ellipse {
+        width: 40px;
+        height: 40px;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .burger {
+        display: none;
+    }
+}
