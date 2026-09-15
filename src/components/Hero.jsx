@@ -12,7 +12,7 @@ const Hero = ({setPage}) => {
     const [current, setCurrent] = useState(0);
     const [direction, setDirection] = useState('left');
     const [isMobile, setIsMobile] = useState(false);
-    const [isOpen, setIsOpen] = useState(false);
+    const [, setIsOpen] = useState(false);
 
     const handleClick = (page) => {
         setPage(page);
