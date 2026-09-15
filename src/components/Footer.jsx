@@ -11,7 +11,7 @@ const Footer = () => {
                 <a href="mailto:xhdhfhcbfx@gmail.com" className={style.link}>
                     xhdhfhcbfx@gmail.com
                 </a>
-                <a href="#" className={style.link}>Telegram</a>
+                <a href="https://t.me/div_h1" className={style.link}>Telegram</a>
             </div>
         </footer>
     );
