@@ -1,17 +1,23 @@
 import { useState, useRef, useEffect } from 'react';
 import style from "../style/hero.module.scss";
-import cat1 from "../image/cat2.png";
+import girl from "../image/k1.png";
 
 const slides = [
-    { title: "Сайты без воды", subtitle: "Лендинги, магазины, поддержка", button: "Обсудить проект" },
-    { title: "Быстро и дёшево", subtitle: "Срок от 3 дней. Цена от 5 000 ₽", button: "Посмотреть цены" },
-    { title: "С душой", subtitle: "Не шаблон. Делаю под тебя", button: "Посмотреть работы" }
+    { title: "Сайты без воды", subtitle: "Лендинги, магазины, поддержка", button: "Обсудить проект", page: "contacts" },
+    { title: "Быстро и дёшево", subtitle: "Срок от 3 дней. Цена от 5 000 ₽", button: "Посмотреть цены"},
+    { title: "С душой", subtitle: "Не шаблон. Делаю под тебя", button: "Посмотреть работы", page: "projects" }
 ];
 
-const Hero = () => {
+const Hero = ({setPage}) => {
     const [current, setCurrent] = useState(0);
     const [direction, setDirection] = useState('left');
     const [isMobile, setIsMobile] = useState(false);
+    const [isOpen, setIsOpen] = useState(false);
+
+    const handleClick = (page) => {
+        setPage(page);
+        setIsOpen(false);
+    };
     const startX = useRef(null);
 
     useEffect(() => {
@@ -55,10 +61,12 @@ const Hero = () => {
                 <div className={style.info_block}>
                     <h1 className={style.title}>{slide.title}</h1>
                     <p className={style.subtitle}>{slide.subtitle}</p>
-                    <button className={style.button}>{slide.button}</button>
-                </div>
-                <div className={style.image}>
-                    <img className={style.cat1} src={cat1} alt="" />
+                    <div className={style.image}>
+                        <img src={girl} alt="" className={style.bgGirl1}/>
+                        <img src={girl} alt="" className={style.bgGirl2}/>
+                        <img src={girl} alt="" className={style.bgGirl3}/>
+                    </div>
+                    <button className={style.button} onClick={() => handleClick(slide.page)}>{slide.button}</button>
                 </div>
             </div>
 

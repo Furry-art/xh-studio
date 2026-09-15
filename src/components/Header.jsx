@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import style from "../style/header.module.scss";
+import logo from "../image/logo.jpg";
 
 const Header = ({ setPage }) => {
     const [isOpen, setIsOpen] = useState(false);
@@ -13,11 +14,7 @@ const Header = ({ setPage }) => {
         <header className={style.body}>
             <div className={style.body_logo}>
                 <div className={style.logo} onClick={() => handleClick("home")}>
-                    <span className={style.logo_xh}>xh</span>
-                    <span className={style.logo_studio}>
-                        studio
-                        <span className={style.ellipse}></span>
-                    </span>
+                    <img src={logo} alt="" className={style.image}/>
                 </div>
             </div>
 

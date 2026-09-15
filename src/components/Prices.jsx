@@ -10,10 +10,10 @@ const Prices = () => {
                     <p className={style.price}>от 5 000 ₽</p>
                     <p className={style.desc}>Одна страница, адаптив, форма связи.</p>
                 </div>
-                <div className={style.card}>
+                <div className={`${style.card} ${style.background}`}>
                     <h3>Магазин</h3>
-                    <p className={style.price}>от 20 000 ₽</p>
-                    <p className={style.desc}>Интернет-магазин с нуля.</p>
+                        <p className={style.price}>от 20 000 ₽</p>
+                        <p className={style.desc}>Интернет-магазин с нуля.</p>
                 </div>
                 <div className={style.card}>
                     <h3>Поддержка</h3>

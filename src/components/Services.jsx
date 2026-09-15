@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 import style from "../style/services.module.scss";
-import cat2 from "../image/cat_01_4K.png";
-import cat3 from "../image/cat3.png";
-import cat4 from "../image/cat4.png";
+import cat2 from "../image/k2.png";
+import cat3 from "../image/k3.png";
+import cat4 from "../image/k4.png";
 
 const codeText = `import React from 'react';
 import style from "../style/serv.scss";

@@ -21,7 +21,7 @@ function App() {
             <Header setPage={setPage} />
             {page === 'home' && (
                 <>
-                    <div data-reveal><Hero /></div>
+                    <div data-reveal><Hero setPage={setPage}/></div>
                     <div data-reveal><Divider /></div>
                     <div data-reveal><Services /></div>
                     <div data-reveal><Prices /></div>

@@ -1,5 +1,5 @@
 .contacts {
-    padding: 60px 50px;
+    width: 94%;
 }
 
 .title {
@@ -13,8 +13,8 @@
 .list {
     display: flex;
     flex-direction: column;
+    width: 100%;
     gap: 20px;
-    width: 50%;
 }
 
 .item {

@@ -36,9 +36,9 @@
 }
 
 .info_block {
-    background-color: #B9FF66;
+    background: linear-gradient(90deg, #B9FF66 0%, #B9FF66 50%, #ffffff 100%);
     border-radius: 50px;
-    width: 100%;
+    width: 85%;
     padding: 40px;
     display: flex;
     flex-direction: column;
@@ -81,9 +81,54 @@
 }
 
 .image {
-    width: 100px;
-    height: 100px;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: end;
+    align-items: center;
     flex-shrink: 0;
+}
+
+
+
+.bgGirl1 {
+    position: absolute;
+    right: 10px;
+    bottom: -8px;   
+    width: 200px; 
+    height: auto;     
+    pointer-events: none; 
+    z-index: 0;
+    opacity: 1;
+    z-index: 3;
+}
+
+.bgGirl2 {
+    position: absolute;
+    right: 75px;
+    bottom: -8px;   
+    width: 200px; 
+    height: auto;
+    opacity: 0.6;      
+    pointer-events: none; 
+    z-index: 0;
+    transform: translateX(-15px);
+    overflow: hidden;
+    z-index: 2;
+}
+
+.bgGirl3 {
+    position: absolute;
+    right: 150px;
+    bottom: -8px;  
+    width: 200px; 
+    height: auto;
+    opacity: 0.4;      
+    pointer-events: none; 
+    z-index: 0;
+    transform: translateX(-30px);
+    overflow: hidden;
+    z-index: 1;
 }
 
 .cat1 {
@@ -108,36 +153,85 @@
         gap: 20px;
     }
 
-    .slide {
-        flex-direction: column;
-        gap: 20px;
-    }
-
     .info_block {
-        width: 95%;
-        padding: 25px;
-        text-align: center;
+    border-radius: 50px;
+    width: 85%;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    box-shadow: none;
     }
 
     .title {
-        font-size: 28px;
+        font-size: 32px;
         margin-bottom: 10px;
+        z-index: 5;
+    }
+
+    .bgGirl1 {
+    position: absolute;
+    right: -10px;
+    bottom: -8px;   
+    width: 200px; 
+    height: auto;     
+    pointer-events: none; 
+    z-index: 0;
+    opacity: 0.6;
+    z-index: 3;
+    }
+
+    .bgGirl2 {
+        position: absolute;
+        right: 75px;
+        bottom: -8px;   
+        width: 200px; 
+        height: auto;
+        opacity: 0.4;      
+        pointer-events: none; 
+        z-index: 0;
+        transform: translateX(-15px);
+        overflow: hidden;
+        z-index: 2;
+    }
+
+    .bgGirl3 {
+        position: absolute;
+        right: 150px;
+        bottom: -8px;  
+        width: 200px; 
+        height: auto;
+        opacity: 0.2;      
+        pointer-events: none; 
+        z-index: 0;
+        transform: translateX(-30px);
+        overflow: hidden;
+        z-index: 0.8;
+    }
+
+    .info_block {
+        background: #B9FF66;
+        width: 85%;
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        box-shadow: none;
     }
 
     .subtitle {
         font-size: 15px;
         margin-bottom: 20px;
+        z-index: 5;
     }
 
     .button {
         width: 100%;
         padding: 16px 24px;
         font-size: 17px;
+        z-index: 5;
     }
 
-    .image {
-        display: none;
-    }
 
     .dots {
         display: flex;
