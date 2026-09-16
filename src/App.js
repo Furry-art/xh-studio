@@ -18,7 +18,7 @@ function App() {
 
     return (
         <div className={style.body}>
-            <Header setPage={setPage} />
+            <div><div data-reveal><Header setPage={setPage} /></div></div>
             {page === 'home' && (
                 <>
                     <div data-reveal><Hero setPage={setPage}/></div>

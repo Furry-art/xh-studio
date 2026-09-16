@@ -1,11 +1,13 @@
 import { useState, useRef, useEffect } from 'react';
 import style from "../style/hero.module.scss";
 import girl from "../image/k1.png";
+import girl2 from "../image/k2.png";
+import girl3 from "../image/k3.png";
 
 const slides = [
-    { title: "Сайты без воды", subtitle: "Лендинги, магазины, поддержка", button: "Обсудить проект", page: "contacts" },
-    { title: "Быстро и дёшево", subtitle: "Срок от 3 дней. Цена от 5 000 ₽", button: "Посмотреть цены"},
-    { title: "С душой", subtitle: "Не шаблон. Делаю под тебя", button: "Посмотреть работы", page: "projects" }
+    { title: "Сайты без воды", subtitle: "Лендинги, магазины, поддержка", button: "Обсудить проект", page: "contacts", image: girl },
+    { title: "Быстро и дёшево", subtitle: "Срок от 3 дней. Цена от 5 000 ₽", button: "Посмотреть цены", image: girl2},
+    { title: "С душой", subtitle: "Не шаблон. Делаю под тебя", button: "Посмотреть работы", page: "projects", image: girl3}
 ];
 
 const Hero = ({setPage}) => {
@@ -62,7 +64,7 @@ const Hero = ({setPage}) => {
                     <h1 className={style.title}>{slide.title}</h1>
                     <p className={style.subtitle}>{slide.subtitle}</p>
                     <div className={style.image}>
-                        <img src={girl} alt="" className={style.bgGirl1}/>
+                        <img src={slide.image} alt="" className={style.bgGirl1}/>
                         <img src={girl} alt="" className={style.bgGirl2}/>
                         <img src={girl} alt="" className={style.bgGirl3}/>
                     </div>
